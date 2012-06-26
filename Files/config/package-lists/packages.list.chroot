@@ -70,7 +70,7 @@ python-simplejson
 
 # Temporary add libs till correct dependencies has been set
 #libnfs1 libmad0 libshairport1 
-afpfs-ng libmpeg2-4 libbluray1
+afpfs-ng-utils libmpeg2-4 libbluray1
 
 # FAQ packages
 chromium-browser synaptic flashplugin-installer ethtool nfs-common autofs

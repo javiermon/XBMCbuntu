@@ -65,7 +65,7 @@ if [ "$GPUTYPE" = "NVIDIA" ]; then
 	echo "blacklist nvidia-96" > /etc/modprobe.d/blacklist-nvidia.conf
 	echo "alias nvidia nvidia-current" > /etc/modprobe.d/blacklist-nvidia.conf
 
-	update-alternatives --set i386-linux-gnu_gl_conf /usr/lib/nvidia-current/ld.so.conf
+	update-alternatives --set x86_64-linux-gnu_gl_conf /usr/lib/nvidia-current/ld.so.conf
 	ldconfig
 
 	# run nvidia-xconfig
@@ -81,7 +81,7 @@ fi
 
 if [ "$GPUTYPE" = "AMD" ]; then
 	# Try fglrx first
-	update-alternatives --set i386-linux-gnu_gl_conf /usr/lib/fglrx/ld.so.conf
+	update-alternatives --set x86_64-linux-gnu_gl_conf /usr/lib/fglrx/ld.so.conf
 	ldconfig
 
 	# run aticonfig
@@ -126,7 +126,7 @@ then
 		# Let the X default ati driver handle the card
 
 		# revert to mesa
-		update-alternatives --set i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf
+		update-alternatives --set x86_64-linux-gnu_gl_conf /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf
 
 		# TODO cleanup environment and guisettings
 		ldconfig

@@ -21,7 +21,7 @@
 #
 
 # Set Intel by default
-update-alternatives --set i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf
+update-alternatives --set x86_64-linux-gnu_gl_conf /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf
 ldconfig
 
 # let's make plymouth happy
